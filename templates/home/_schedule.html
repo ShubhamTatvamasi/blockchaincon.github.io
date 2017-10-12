@@ -1,0 +1,73 @@
+<section id="schedule" class="schedule section">
+    <div class="row text-center">
+
+        <h2 class="title text-center"><img src="images/icons/schedule.png" /><br/> SCHEDULE</h2>
+
+        <div class="tabbable-panel">
+            <div class="tabbable-line">
+                <ul class="nav nav-tabs nav-justified responsive">
+                    {%- for day in schedule -%}
+                    <li class="col-md-4 {% if loop.index == 3 %}active{% endif %}">
+                        <a href="#{{ day.id }}" data-toggle="tab">
+                            <h4 class="date"><i class="fa fa-rocket"></i>&nbsp;&nbsp;{{ day.date }}</h4>
+                        </a>
+                    </li>
+                    {%- endfor -%}
+                </ul>
+                <div class="tab-content responsive">
+                    {% for day in schedule %}
+                    <div class="tab-pane {% if loop.index == 3 %}active{% endif %}" id="{{ day.id }}">
+                        <p>{{ day.description }}</p>
+                        <div class="table-responsive text-left">
+                            <div class="col-md-10 col-md-offset-1 custyle">
+                                <table id="tableDiv" class="table custab">
+                                    <thead>
+                                        <tr>
+                                            <th style="width:25%;" class="text-center pyred">TIME</th>
+                                            <th style="width:25%;" class="text-center pyred">AUDI 1</th>
+                                            <th style="width:25%;" class="text-center pyred">AUDI 2</th>
+                                            <th style="width:25%;" class="text-center pyred">LECTURE HALL 2</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        {% for zone in day.events %}
+                                        <tr>
+                                            <td class="pyred">{{ zone.time }}</td>
+                                            {% if zone.talks[0].title == "Lunch" or zone.talks[0].title == "Break" or zone.talks[0].title == "Break - Tea & Snacks" %}
+                                                {% for i in range(3) %}
+                                                    <td><center>
+                                                        <strong>{{ zone.talks[0].title }}</strong>
+                                                    </center></td>
+                                                {% endfor %}
+                                            {% else %}
+
+                                                {% for talk in zone.talks %}
+                                                    <td><center>
+                                                    {%- if talk.link -%}
+                                                    <strong><a href="{{ talk.link }}?ref=schedule" target="_blank" title="{{ talk.title }}">{{ talk.title }}</a></strong><br><em>By {{ talk.speaker }}</em>
+                                                    {%- else -%}
+                                                    <strong>{{ talk.title }}</strong>
+                                                    {%- endif -%}
+                                                    </center></td>
+                                                {% endfor %}
+                                            {% endif %}
+                                        </tr>
+                                        {% endfor %}
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+                <div style="display:none"><a href='https://in.pycon.org/cfp/2016/proposals/deploy-python-applications-anywhere-cloud-raspberry-pi-using-docker~ej0Wb/'><!— nothing —></a></div>
+               <div style="display:none"><a href='https://in.pycon.org/cfp/2016/proposals/machine-learning-with-python~e007e/'><!— nothing —></a></div>
+               <div style="display:none"><a href='https://in.pycon.org/cfp/2016/proposals/put-that-swag-in-your-api-swaggerize-it~eV75a/'><!— nothing —></a></div>
+               <div style="display:none"><a href='https://in.pycon.org/cfp/2016/proposals/add-intelligence-to-your-python-apps-using-cognitive-services~bqVRd/'><!— nothing —></a></div>
+                <div class="row text-center">
+                    <span class="note"><small><sup>*</sup>Note: These schedules are tentative and are subjected to change as per speakers availability and/or other reasons.</span></small>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

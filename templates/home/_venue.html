@@ -1,0 +1,44 @@
+<!-- ******venue****** -->
+<section id="venue" class="venue section">
+    <div class="row text-center">
+        <h2 class="title text-center">
+             <br/><img src="images/icons/venue.png" /><br/>VENUE
+        </h2>
+        <div class="col-md-10 col-md-offset-1">
+            <div class="pybox">
+
+                {% set map_height = 450 %}
+                <style>
+                    .map-overlay {
+                        background:transparent;
+                        position:relative;
+                        width:100%;
+                        height: {{ map_height }}px;
+                        top: {{ map_height }}px;
+                        margin-top: -{{ map_height }}px;
+                    }
+                </style>
+                <div class="map-overlay" onClick="style.pointerEvents='none'"></div>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d224345.9716192791!2d77.0688975841694!3d28.527519806413576!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd5b347eb62d%3A0x52c2b7494e204dce!2sNew+Delhi%2C+Delhi!5e0!3m2!1sen!2sin!4v1507803285975" width="100%" height="{{ map_height }}" frameborder="0" style="border:0;" allowfullscreen></iframe>
+
+                <div class="content text-center">
+                    <h3>TBD</h3>
+                    <span class="help-block">
+                        New Delhi, India
+                        <br/>
+                    </span>
+                    <!--a href="#" target="_blank" class="btn btn-pycon">
+                        <i class="fa fa-location-arrow"></i> Find Directions
+                    </a-->
+                    <!--a href="#" target="_blank" class="btn btn-pycon">
+                        <i class="fa fa-cab"></i> Book a Cab
+                    </a-->
+                    <!--a href="#" target="_blank" class="btn btn-pycon">
+                        <i class="fa fa-building"></i> Book Hotel
+                    </a-->
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--//venue-->
