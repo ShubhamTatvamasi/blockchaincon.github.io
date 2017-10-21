@@ -288,6 +288,11 @@ section {
     width: 50%;
 }
 
+.gallery--img{
+    width: 80%;
+    padding: 1% 0%;
+}
+
 .modal-body {
     padding-left: 2em;
     padding-right: 2em;
@@ -592,8 +597,8 @@ button {
     color: #29958a;
 }
 .speaker--bio {
-    font-size: 0.8em;
-    text-align: justify;
+    font-size: 1.2 em;
+    text-align: center;
 }
 
 /* .....NavBar: Fully showing nav bar..... */
