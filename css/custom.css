@@ -285,7 +285,12 @@ section {
 }
 
 .sponsor--img{
-    width: 50%;
+    width: 70%;
+    padding: 5% 0%;
+}
+
+.sponsor--img2{
+    width: 55%;
     padding: 5% 0%;
 }
 
