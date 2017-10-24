@@ -306,7 +306,7 @@ section {
 
 .speakers {
     /*margin-top:-80px;*/
-    height: 130vh;
+    min-height: 130vh;
 }
 
 .speakers .social {
