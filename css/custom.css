@@ -382,6 +382,7 @@ section {
 .pyred {
     color:#29958a;
     font-weight:400;
+    font-size: 14px;
 }
 
 .pytablefont {
@@ -455,7 +456,7 @@ button {
 }
 
 .sponsors h3 {
-    margin:40px 0 15px 0;
+    margin:5px 0 5px 0;
 }
 
 #sponsorship-download {
