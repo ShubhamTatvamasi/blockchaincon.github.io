@@ -382,6 +382,7 @@ section {
 .pyred {
     color:#29958a;
     font-weight:400;
+    font-size: 14px;
 }
 
 .pytablefont {
@@ -455,7 +456,7 @@ button {
 }
 
 .sponsors h3 {
-    margin:40px 0 15px 0;
+    margin:5px 0 5px 0;
 }
 
 #sponsorship-download {
@@ -625,4 +626,22 @@ button {
     nav.sidebar .forAnimate {
         opacity: 1;
     }
+}
+
+.thumbnail {margin-bottom:6px;}
+
+.carousel-control.left,.carousel-control.right{
+  background-image:none;
+  margin-top:10%;
+  width:5%;
+}
+.img-overlay--text{
+    position: absolute;
+    background: rgba(255,255,255,0.7);
+    z-index: 2;
+    text-align: center;
+    top: 40%;
+    left: 20%;
+    padding-left: 10px;
+    padding-right: 10px;
 }
