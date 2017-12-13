@@ -1,2 +1,2 @@
 # Blockchaincon.io
-Global Blockschain Conference official website.
+Global Blockchain Conference official website.
